@@ -20,7 +20,7 @@ module clock_divider_tb;
 
     initial begin
 
-        $dumpfile("clock_divider.vcd");
+        $dumpfile("clock_divider.v");
         $dumpvars(0, clock_divider_tb);
 
        
