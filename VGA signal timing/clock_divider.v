@@ -1,5 +1,5 @@
 
-// source: fpga4student.com 
+// source: fpga4student.com (modified)
 
 
 module clock_divider (
