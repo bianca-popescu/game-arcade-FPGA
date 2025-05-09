@@ -1,4 +1,4 @@
-module auto_piece (
+module AFPL (
     input clk,  
     input rst,  
     input tick,  
