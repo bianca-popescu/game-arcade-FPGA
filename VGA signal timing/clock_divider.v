@@ -1,29 +1,25 @@
 
 // source: fpga4student.com 
 
-module clock_divider(clock_in,clock_out
-    );
 
-input clock_in; // input clock on FPGA
-output reg clock_out; // output clock after dividing the input clock by divisor
+module clock_divider (
+    input wire clock_in,       // input clock (e.g., 50 MHz)
+    output reg clock_out = 0   // output clock
+);
 
-reg[27:0] counter=28'd0;
-parameter DIVISOR = 28'd2;
+    parameter DIVISOR = 2;     // set to 2 for 25 MHz output from 50 MHz input
+    reg [27:0] counter = 0;    // counter to divide clock
 
-// F(clock_out) = F(clock_in)/DIVISOR
+    always @(posedge clock_in) begin
 
-always @(posedge clock_in)
-begin
-    counter <= counter + 28'd1;
+        if (counter >= DIVISOR - 1)
+            counter <= 0;
+        else
+            counter <= counter + 1;
 
-    if(counter>=(DIVISOR-1))
-        counter <= 28'd0;
-
-    if (counter < DIVISOR / 2)
-        clock_out <= 1'b1;
-    else
-        clock_out <= 1'b0;
-end
+        clock_out <= (counter < DIVISOR / 2);
+    end
 
 endmodule
+
 
