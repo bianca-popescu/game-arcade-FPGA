@@ -1,0 +1,899 @@
+# Reading pref.tcl
+# do top-module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carme/Desktop/tetris-FPGA {C:/Users/carme/Desktop/tetris-FPGA/top_module.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:51:26 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carme/Desktop/tetris-FPGA" C:/Users/carme/Desktop/tetris-FPGA/top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 16:51:26 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carme/Desktop/tetris-FPGA {C:/Users/carme/Desktop/tetris-FPGA/tick_generator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:51:26 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carme/Desktop/tetris-FPGA" C:/Users/carme/Desktop/tetris-FPGA/tick_generator.v 
+# -- Compiling module tick_generator
+# 
+# Top level modules:
+# 	tick_generator
+# End time: 16:51:27 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carme/Desktop/tetris-FPGA {C:/Users/carme/Desktop/tetris-FPGA/grid.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:51:27 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carme/Desktop/tetris-FPGA" C:/Users/carme/Desktop/tetris-FPGA/grid.v 
+# -- Compiling module grid
+# ** Error: C:/Users/carme/Desktop/tetris-FPGA/grid.v(31): Declarations not allowed in unnamed block.
+# End time: 16:51:27 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./top-module_run_msim_rtl_verilog.do line 10
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+C:/Users/carme/Desktop/tetris-FPGA {C:/Users/carme/Desktop/tetris-FPGA/grid.v}"
+vdel -all
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+cd C:/Users/carme/Desktop/tetris-FPGA/simulare
+# reading C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+vdel -all
+vlib work
+vlog backrgound.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:52:17 on May 21,2025
+# vlog -reportprogress 300 backrgound.v 
+# ** Error: (vlog-7) Failed to open design unit file "backrgound.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 16:52:17 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog background.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:52:34 on May 21,2025
+# vlog -reportprogress 300 background.v 
+# -- Compiling module background
+# 
+# Top level modules:
+# 	background
+# End time: 16:52:34 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog grid.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:52:41 on May 21,2025
+# vlog -reportprogress 300 grid.v 
+# -- Compiling module grid
+# 
+# Top level modules:
+# 	grid
+# End time: 16:52:41 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog AFPL.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:52:47 on May 21,2025
+# vlog -reportprogress 300 AFPL.v 
+# -- Compiling module AFPL
+# 
+# Top level modules:
+# 	AFPL
+# End time: 16:52:47 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog clock_
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:52:51 on May 21,2025
+# vlog -reportprogress 300 clock_ 
+# ** Error: (vlog-7) Failed to open design unit file "clock_" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 16:52:51 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog clock_divider.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:52:59 on May 21,2025
+# vlog -reportprogress 300 clock_divider.v 
+# -- Compiling module clock_divider
+# 
+# Top level modules:
+# 	clock_divider
+# End time: 16:52:59 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog tick_generator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:53:11 on May 21,2025
+# vlog -reportprogress 300 tick_generator.v 
+# -- Compiling module tick_generator
+# 
+# Top level modules:
+# 	tick_generator
+# End time: 16:53:11 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:53:25 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 16:53:26 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:53:35 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 16:53:35 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 16:54:01 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Error: (vsim-3043) Unresolved reference to 'tb_tetris_top'.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb File: top_module_tb.v Line: 26
+# ** Error (suppressible): (vsim-3389) Port 'o_hsync' not found in the connected module (3rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'o_vsync' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'o_red' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'o_green' not found in the connected module (6th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'o_blue' not found in the connected module (7th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# Error loading design
+# End time: 16:54:03 on May 21,2025, Elapsed time: 0:00:02
+# Errors: 6, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 16:57:09 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Error: (vsim-3043) Unresolved reference to 'tb_tetris_top'.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb File: top_module_tb.v Line: 26
+# ** Error (suppressible): (vsim-3389) Port 'o_hsync' not found in the connected module (3rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'o_vsync' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'o_red' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'o_green' not found in the connected module (6th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'o_blue' not found in the connected module (7th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 14
+# Error loading design
+# End time: 16:57:10 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 0
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:57:39 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# ** Error: (vlog-13069) top_module_tb.v(14): near ")": syntax error, unexpected ')', expecting .* or '.'.
+# End time: 16:57:40 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:58:00 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 16:58:01 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 16:58:03 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Error: (vsim-3043) Unresolved reference to 'tb_tetris_top'.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb File: top_module_tb.v Line: 18
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 4, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 11
+# ** Warning: (vsim-3722) top_module_tb.v(11): [TFMPC] - Missing connection for port 'current_x'.
+# ** Warning: (vsim-3722) top_module_tb.v(11): [TFMPC] - Missing connection for port 'current_y'.
+# Error loading design
+# End time: 16:58:04 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 3
+vsim -voptargs=+acc top_module_tb
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 16:58:41 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Error: (vsim-3043) Unresolved reference to 'tb_tetris_top'.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb File: top_module_tb.v Line: 18
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 4, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 11
+# ** Warning: (vsim-3722) top_module_tb.v(11): [TFMPC] - Missing connection for port 'current_x'.
+# ** Warning: (vsim-3722) top_module_tb.v(11): [TFMPC] - Missing connection for port 'current_y'.
+# Error loading design
+# End time: 16:58:43 on May 21,2025, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 3
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:58:45 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 16:58:45 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 16:58:51 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Error: (vsim-3043) Unresolved reference to 'tb_tetris_top'.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb File: top_module_tb.v Line: 18
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 4, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 11
+# ** Warning: (vsim-3722) top_module_tb.v(11): [TFMPC] - Missing connection for port 'current_x'.
+# ** Warning: (vsim-3722) top_module_tb.v(11): [TFMPC] - Missing connection for port 'current_y'.
+# Error loading design
+# End time: 16:58:52 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 3
+vlog top_module_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:01:12 on May 21,2025
+# vlog -reportprogress 300 top_module_tb 
+# ** Error: (vlog-7) Failed to open design unit file "top_module_tb" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 17:01:12 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:01:26 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 17:01:26 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:01:40 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 4, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 11
+# ** Warning: (vsim-3722) top_module_tb.v(11): [TFMPC] - Missing connection for port 'current_x'.
+# ** Warning: (vsim-3722) top_module_tb.v(11): [TFMPC] - Missing connection for port 'current_y'.
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:04:45 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 17:04:45 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# End time: 17:04:52 on May 21,2025, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:04:52 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'current_x'. The port definition is at: top_module.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 13
+add wave *
+run 10000ns
+run 100000 ns
+add wave *
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:17:06 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 17:17:06 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:17:15 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 17:17:15 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# End time: 17:17:26 on May 21,2025, Elapsed time: 0:12:34
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:17:26 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'current_x'. The port definition is at: top_module.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 17
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'current_y'. The port definition is at: top_module.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 17
+add wave *
+run 50000000 ns
+# ** Note: $finish    : top_module_tb.v(31)
+#    Time: 1000100 ns  Iteration: 0  Instance: /top_module_tb
+# 1
+# Break in Module top_module_tb at top_module_tb.v line 31
+run 10000000ns
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:08 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 17:22:08 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:14 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 17:22:14 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run 10000000ns
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:25:47 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 17:25:47 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:25:50 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 17:25:50 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# End time: 17:25:59 on May 21,2025, Elapsed time: 0:08:33
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:25:59 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'current_x'. The port definition is at: top_module.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 17
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'current_y'. The port definition is at: top_module.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 17
+add wave *
+run 200000ns
+# WARNING: No extended dataflow license exists
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:07 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 17:32:07 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:09 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 17:32:09 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# End time: 17:32:14 on May 21,2025, Elapsed time: 0:06:15
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:32:14 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'current_x'. The port definition is at: top_module.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 17
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'current_y'. The port definition is at: top_module.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module_tb/uut File: top_module_tb.v Line: 17
+add wave *
+run 200000ns
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:38:27 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 17:38:27 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:38:32 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 17:38:32 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# End time: 17:38:38 on May 21,2025, Elapsed time: 0:06:24
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:38:38 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+add wave *
+run 200000ns
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:45:18 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# ** Error: (vlog-13069) top_module.v(78): near "end": syntax error, unexpected end.
+# End time: 17:45:18 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog top_module.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:45:50 on May 21,2025
+# vlog -reportprogress 300 top_module.v 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 17:45:51 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog top_module_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:45:55 on May 21,2025
+# vlog -reportprogress 300 top_module_tb.v 
+# -- Compiling module top_module_tb
+# 
+# Top level modules:
+# 	top_module_tb
+# End time: 17:45:55 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc top_module_tb
+# End time: 17:46:00 on May 21,2025, Elapsed time: 0:07:22
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:46:00 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+add wave *
+vsim -voptargs=+acc top_module_tb
+# End time: 17:46:26 on May 21,2025, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:46:26 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+add wave *
+run 1000 ns
+# Time=0 rst=1 tick=0 y= 0
+# Time=50000 rst=0 tick=0 y= 0
+# Time=145000 rst=0 tick=1 y= 0
+# Time=155000 rst=0 tick=0 y= 1
+# Time=245000 rst=0 tick=1 y= 1
+# Time=255000 rst=0 tick=0 y= 2
+# Time=345000 rst=0 tick=1 y= 2
+# Time=355000 rst=0 tick=0 y= 3
+# Time=445000 rst=0 tick=1 y= 3
+# Time=455000 rst=0 tick=0 y= 4
+# Time=545000 rst=0 tick=1 y= 4
+# Time=555000 rst=0 tick=0 y= 5
+# Time=645000 rst=0 tick=1 y= 5
+# Time=655000 rst=0 tick=0 y= 6
+# Time=745000 rst=0 tick=1 y= 6
+# Time=755000 rst=0 tick=0 y= 7
+# Time=845000 rst=0 tick=1 y= 7
+# Time=855000 rst=0 tick=0 y= 8
+# Time=945000 rst=0 tick=1 y= 8
+# Time=955000 rst=0 tick=0 y= 9
+run 10000 ns
+# Time=1045000 rst=0 tick=1 y= 9
+# Time=1055000 rst=0 tick=0 y=10
+# Time=1145000 rst=0 tick=1 y=10
+# Time=1155000 rst=0 tick=0 y=11
+# Time=1245000 rst=0 tick=1 y=11
+# Time=1255000 rst=0 tick=0 y=12
+# Time=1345000 rst=0 tick=1 y=12
+# Time=1355000 rst=0 tick=0 y=13
+# Time=1445000 rst=0 tick=1 y=13
+# Time=1455000 rst=0 tick=0 y=14
+# Time=1545000 rst=0 tick=1 y=14
+# Time=1555000 rst=0 tick=0 y=15
+# Time=1645000 rst=0 tick=1 y=15
+# Time=1655000 rst=0 tick=0 y=16
+# Time=1745000 rst=0 tick=1 y=16
+# Time=1755000 rst=0 tick=0 y=17
+# Time=1845000 rst=0 tick=1 y=17
+# Time=1855000 rst=0 tick=0 y=18
+# Time=1945000 rst=0 tick=1 y=18
+# Time=1955000 rst=0 tick=0 y=19
+# Time=2045000 rst=0 tick=1 y=19
+# Time=2055000 rst=0 tick=0 y= 0
+# Time=2145000 rst=0 tick=1 y= 0
+# Time=2155000 rst=0 tick=0 y= 1
+# Time=2245000 rst=0 tick=1 y= 1
+# Time=2255000 rst=0 tick=0 y= 2
+# Time=2345000 rst=0 tick=1 y= 2
+# Time=2355000 rst=0 tick=0 y= 3
+# Time=2445000 rst=0 tick=1 y= 3
+# Time=2455000 rst=0 tick=0 y= 4
+# Time=2545000 rst=0 tick=1 y= 4
+# Time=2555000 rst=0 tick=0 y= 5
+# Time=2645000 rst=0 tick=1 y= 5
+# Time=2655000 rst=0 tick=0 y= 6
+# Time=2745000 rst=0 tick=1 y= 6
+# Time=2755000 rst=0 tick=0 y= 7
+# Time=2845000 rst=0 tick=1 y= 7
+# Time=2855000 rst=0 tick=0 y= 8
+# Time=2945000 rst=0 tick=1 y= 8
+# Time=2955000 rst=0 tick=0 y= 9
+# Time=3045000 rst=0 tick=1 y= 9
+# Time=3055000 rst=0 tick=0 y=10
+# Time=3145000 rst=0 tick=1 y=10
+# Time=3155000 rst=0 tick=0 y=11
+# Time=3245000 rst=0 tick=1 y=11
+# Time=3255000 rst=0 tick=0 y=12
+# Time=3345000 rst=0 tick=1 y=12
+# Time=3355000 rst=0 tick=0 y=13
+# Time=3445000 rst=0 tick=1 y=13
+# Time=3455000 rst=0 tick=0 y=14
+# Time=3545000 rst=0 tick=1 y=14
+# Time=3555000 rst=0 tick=0 y=15
+# Time=3645000 rst=0 tick=1 y=15
+# Time=3655000 rst=0 tick=0 y=16
+# Time=3745000 rst=0 tick=1 y=16
+# Time=3755000 rst=0 tick=0 y=17
+# Time=3845000 rst=0 tick=1 y=17
+# Time=3855000 rst=0 tick=0 y=18
+# Time=3945000 rst=0 tick=1 y=18
+# Time=3955000 rst=0 tick=0 y=19
+# Time=4045000 rst=0 tick=1 y=19
+# Time=4055000 rst=0 tick=0 y= 0
+# Time=4145000 rst=0 tick=1 y= 0
+# Time=4155000 rst=0 tick=0 y= 1
+# Time=4245000 rst=0 tick=1 y= 1
+# Time=4255000 rst=0 tick=0 y= 2
+# Time=4345000 rst=0 tick=1 y= 2
+# Time=4355000 rst=0 tick=0 y= 3
+# Time=4445000 rst=0 tick=1 y= 3
+# Time=4455000 rst=0 tick=0 y= 4
+# Time=4545000 rst=0 tick=1 y= 4
+# Time=4555000 rst=0 tick=0 y= 5
+# Time=4645000 rst=0 tick=1 y= 5
+# Time=4655000 rst=0 tick=0 y= 6
+# Time=4745000 rst=0 tick=1 y= 6
+# Time=4755000 rst=0 tick=0 y= 7
+# Time=4845000 rst=0 tick=1 y= 7
+# Time=4855000 rst=0 tick=0 y= 8
+# Time=4945000 rst=0 tick=1 y= 8
+# Time=4955000 rst=0 tick=0 y= 9
+# Time=5045000 rst=0 tick=1 y= 9
+# Time=5055000 rst=0 tick=0 y=10
+# Time=5145000 rst=0 tick=1 y=10
+# Time=5155000 rst=0 tick=0 y=11
+# Time=5245000 rst=0 tick=1 y=11
+# Time=5255000 rst=0 tick=0 y=12
+# Time=5345000 rst=0 tick=1 y=12
+# Time=5355000 rst=0 tick=0 y=13
+# Time=5445000 rst=0 tick=1 y=13
+# Time=5455000 rst=0 tick=0 y=14
+# Time=5545000 rst=0 tick=1 y=14
+# Time=5555000 rst=0 tick=0 y=15
+# Time=5645000 rst=0 tick=1 y=15
+# Time=5655000 rst=0 tick=0 y=16
+# Time=5745000 rst=0 tick=1 y=16
+# Time=5755000 rst=0 tick=0 y=17
+# Time=5845000 rst=0 tick=1 y=17
+# Time=5855000 rst=0 tick=0 y=18
+# Time=5945000 rst=0 tick=1 y=18
+# Time=5955000 rst=0 tick=0 y=19
+# Time=6045000 rst=0 tick=1 y=19
+# Time=6055000 rst=0 tick=0 y= 0
+# Time=6145000 rst=0 tick=1 y= 0
+# Time=6155000 rst=0 tick=0 y= 1
+# Time=6245000 rst=0 tick=1 y= 1
+# Time=6255000 rst=0 tick=0 y= 2
+# Time=6345000 rst=0 tick=1 y= 2
+# Time=6355000 rst=0 tick=0 y= 3
+# Time=6445000 rst=0 tick=1 y= 3
+# Time=6455000 rst=0 tick=0 y= 4
+# Time=6545000 rst=0 tick=1 y= 4
+# Time=6555000 rst=0 tick=0 y= 5
+# Time=6645000 rst=0 tick=1 y= 5
+# Time=6655000 rst=0 tick=0 y= 6
+# Time=6745000 rst=0 tick=1 y= 6
+# Time=6755000 rst=0 tick=0 y= 7
+# Time=6845000 rst=0 tick=1 y= 7
+# Time=6855000 rst=0 tick=0 y= 8
+# Time=6945000 rst=0 tick=1 y= 8
+# Time=6955000 rst=0 tick=0 y= 9
+# Time=7045000 rst=0 tick=1 y= 9
+# Time=7055000 rst=0 tick=0 y=10
+# Time=7145000 rst=0 tick=1 y=10
+# Time=7155000 rst=0 tick=0 y=11
+# Time=7245000 rst=0 tick=1 y=11
+# Time=7255000 rst=0 tick=0 y=12
+# Time=7345000 rst=0 tick=1 y=12
+# Time=7355000 rst=0 tick=0 y=13
+# Time=7445000 rst=0 tick=1 y=13
+# Time=7455000 rst=0 tick=0 y=14
+# Time=7545000 rst=0 tick=1 y=14
+# Time=7555000 rst=0 tick=0 y=15
+# Time=7645000 rst=0 tick=1 y=15
+# Time=7655000 rst=0 tick=0 y=16
+# Time=7745000 rst=0 tick=1 y=16
+# Time=7755000 rst=0 tick=0 y=17
+# Time=7845000 rst=0 tick=1 y=17
+# Time=7855000 rst=0 tick=0 y=18
+# Time=7945000 rst=0 tick=1 y=18
+# Time=7955000 rst=0 tick=0 y=19
+# Time=8045000 rst=0 tick=1 y=19
+# Time=8055000 rst=0 tick=0 y= 0
+# Time=8145000 rst=0 tick=1 y= 0
+# Time=8155000 rst=0 tick=0 y= 1
+# Time=8245000 rst=0 tick=1 y= 1
+# Time=8255000 rst=0 tick=0 y= 2
+# Time=8345000 rst=0 tick=1 y= 2
+# Time=8355000 rst=0 tick=0 y= 3
+# Time=8445000 rst=0 tick=1 y= 3
+# Time=8455000 rst=0 tick=0 y= 4
+# Time=8545000 rst=0 tick=1 y= 4
+# Time=8555000 rst=0 tick=0 y= 5
+# Time=8645000 rst=0 tick=1 y= 5
+# Time=8655000 rst=0 tick=0 y= 6
+# Time=8745000 rst=0 tick=1 y= 6
+# Time=8755000 rst=0 tick=0 y= 7
+# Time=8845000 rst=0 tick=1 y= 7
+# Time=8855000 rst=0 tick=0 y= 8
+# Time=8945000 rst=0 tick=1 y= 8
+# Time=8955000 rst=0 tick=0 y= 9
+# Time=9045000 rst=0 tick=1 y= 9
+# Time=9055000 rst=0 tick=0 y=10
+# Time=9145000 rst=0 tick=1 y=10
+# Time=9155000 rst=0 tick=0 y=11
+# Time=9245000 rst=0 tick=1 y=11
+# Time=9255000 rst=0 tick=0 y=12
+# Time=9345000 rst=0 tick=1 y=12
+# Time=9355000 rst=0 tick=0 y=13
+# Time=9445000 rst=0 tick=1 y=13
+# Time=9455000 rst=0 tick=0 y=14
+# Time=9545000 rst=0 tick=1 y=14
+# Time=9555000 rst=0 tick=0 y=15
+# Time=9645000 rst=0 tick=1 y=15
+# Time=9655000 rst=0 tick=0 y=16
+# Time=9745000 rst=0 tick=1 y=16
+# Time=9755000 rst=0 tick=0 y=17
+# Time=9845000 rst=0 tick=1 y=17
+# Time=9855000 rst=0 tick=0 y=18
+# Time=9945000 rst=0 tick=1 y=18
+# Time=9955000 rst=0 tick=0 y=19
+# Time=10045000 rst=0 tick=1 y=19
+# Time=10055000 rst=0 tick=0 y= 0
+# Time=10145000 rst=0 tick=1 y= 0
+# Time=10155000 rst=0 tick=0 y= 1
+# Time=10245000 rst=0 tick=1 y= 1
+# Time=10255000 rst=0 tick=0 y= 2
+# Time=10345000 rst=0 tick=1 y= 2
+# Time=10355000 rst=0 tick=0 y= 3
+# Time=10445000 rst=0 tick=1 y= 3
+# Time=10455000 rst=0 tick=0 y= 4
+# Time=10545000 rst=0 tick=1 y= 4
+# Time=10555000 rst=0 tick=0 y= 5
+# Time=10645000 rst=0 tick=1 y= 5
+# Time=10655000 rst=0 tick=0 y= 6
+# Time=10745000 rst=0 tick=1 y= 6
+# Time=10755000 rst=0 tick=0 y= 7
+# Time=10845000 rst=0 tick=1 y= 7
+# Time=10855000 rst=0 tick=0 y= 8
+# Time=10945000 rst=0 tick=1 y= 8
+# Time=10955000 rst=0 tick=0 y= 9
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+run 1000 ns
+# Time=11045000 rst=0 tick=1 y= 9
+# Time=11055000 rst=0 tick=0 y=10
+# Time=11145000 rst=0 tick=1 y=10
+# Time=11155000 rst=0 tick=0 y=11
+# Time=11245000 rst=0 tick=1 y=11
+# Time=11255000 rst=0 tick=0 y=12
+# Time=11345000 rst=0 tick=1 y=12
+# Time=11355000 rst=0 tick=0 y=13
+# Time=11445000 rst=0 tick=1 y=13
+# Time=11455000 rst=0 tick=0 y=14
+# Time=11545000 rst=0 tick=1 y=14
+# Time=11555000 rst=0 tick=0 y=15
+# Time=11645000 rst=0 tick=1 y=15
+# Time=11655000 rst=0 tick=0 y=16
+# Time=11745000 rst=0 tick=1 y=16
+# Time=11755000 rst=0 tick=0 y=17
+# Time=11845000 rst=0 tick=1 y=17
+# Time=11855000 rst=0 tick=0 y=18
+# Time=11945000 rst=0 tick=1 y=18
+# Time=11955000 rst=0 tick=0 y=19
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+vsim -voptargs=+acc top_module_tb
+# End time: 17:57:03 on May 21,2025, Elapsed time: 0:10:37
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:57:03 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+add wave *
+run 1000 ns
+# Time=0 rst=1 tick=0 y= 0
+# Time=50000 rst=0 tick=0 y= 0
+# Time=145000 rst=0 tick=1 y= 0
+# Time=155000 rst=0 tick=0 y= 1
+# Time=245000 rst=0 tick=1 y= 1
+# Time=255000 rst=0 tick=0 y= 2
+# Time=345000 rst=0 tick=1 y= 2
+# Time=355000 rst=0 tick=0 y= 3
+# Time=445000 rst=0 tick=1 y= 3
+# Time=455000 rst=0 tick=0 y= 4
+# Time=545000 rst=0 tick=1 y= 4
+# Time=555000 rst=0 tick=0 y= 5
+# Time=645000 rst=0 tick=1 y= 5
+# Time=655000 rst=0 tick=0 y= 6
+# Time=745000 rst=0 tick=1 y= 6
+# Time=755000 rst=0 tick=0 y= 7
+# Time=845000 rst=0 tick=1 y= 7
+# Time=855000 rst=0 tick=0 y= 8
+# Time=945000 rst=0 tick=1 y= 8
+# Time=955000 rst=0 tick=0 y= 9
+run 2000 ns
+# Time=1045000 rst=0 tick=1 y= 9
+# Time=1055000 rst=0 tick=0 y=10
+# Time=1145000 rst=0 tick=1 y=10
+# Time=1155000 rst=0 tick=0 y=11
+# Time=1245000 rst=0 tick=1 y=11
+# Time=1255000 rst=0 tick=0 y=12
+# Time=1345000 rst=0 tick=1 y=12
+# Time=1355000 rst=0 tick=0 y=13
+# Time=1445000 rst=0 tick=1 y=13
+# Time=1455000 rst=0 tick=0 y=14
+# Time=1545000 rst=0 tick=1 y=14
+# Time=1555000 rst=0 tick=0 y=15
+# Time=1645000 rst=0 tick=1 y=15
+# Time=1655000 rst=0 tick=0 y=16
+# Time=1745000 rst=0 tick=1 y=16
+# Time=1755000 rst=0 tick=0 y=17
+# Time=1845000 rst=0 tick=1 y=17
+# Time=1855000 rst=0 tick=0 y=18
+# Time=1945000 rst=0 tick=1 y=18
+# Time=1955000 rst=0 tick=0 y=19
+# Time=2045000 rst=0 tick=1 y=19
+# Time=2055000 rst=0 tick=0 y= 0
+# Time=2145000 rst=0 tick=1 y= 0
+# Time=2155000 rst=0 tick=0 y= 1
+# Time=2245000 rst=0 tick=1 y= 1
+# Time=2255000 rst=0 tick=0 y= 2
+# Time=2345000 rst=0 tick=1 y= 2
+# Time=2355000 rst=0 tick=0 y= 3
+# Time=2445000 rst=0 tick=1 y= 3
+# Time=2455000 rst=0 tick=0 y= 4
+# Time=2545000 rst=0 tick=1 y= 4
+# Time=2555000 rst=0 tick=0 y= 5
+# Time=2645000 rst=0 tick=1 y= 5
+# Time=2655000 rst=0 tick=0 y= 6
+# Time=2745000 rst=0 tick=1 y= 6
+# Time=2755000 rst=0 tick=0 y= 7
+# Time=2845000 rst=0 tick=1 y= 7
+# Time=2855000 rst=0 tick=0 y= 8
+# Time=2945000 rst=0 tick=1 y= 8
+# Time=2955000 rst=0 tick=0 y= 9
+vsim -voptargs=+acc top_module_tb
+# End time: 17:58:02 on May 21,2025, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" top_module_tb 
+# Start time: 17:58:02 on May 21,2025
+# Loading work.top_module_tb
+# Loading work.top_module
+# Loading work.tick_generator
+# Loading work.grid
+add wave *
+run 2000 ns
+# Time=0 rst=1 tick=0 y= 0
+# Time=50000 rst=0 tick=0 y= 0
+# Time=145000 rst=0 tick=1 y= 0
+# Time=155000 rst=0 tick=0 y= 1
+# Time=245000 rst=0 tick=1 y= 1
+# Time=255000 rst=0 tick=0 y= 2
+# Time=345000 rst=0 tick=1 y= 2
+# Time=355000 rst=0 tick=0 y= 3
+# Time=445000 rst=0 tick=1 y= 3
+# Time=455000 rst=0 tick=0 y= 4
+# Time=545000 rst=0 tick=1 y= 4
+# Time=555000 rst=0 tick=0 y= 5
+# Time=645000 rst=0 tick=1 y= 5
+# Time=655000 rst=0 tick=0 y= 6
+# Time=745000 rst=0 tick=1 y= 6
+# Time=755000 rst=0 tick=0 y= 7
+# Time=845000 rst=0 tick=1 y= 7
+# Time=855000 rst=0 tick=0 y= 8
+# Time=945000 rst=0 tick=1 y= 8
+# Time=955000 rst=0 tick=0 y= 9
+# Time=1045000 rst=0 tick=1 y= 9
+# Time=1055000 rst=0 tick=0 y=10
+# Time=1145000 rst=0 tick=1 y=10
+# Time=1155000 rst=0 tick=0 y=11
+# Time=1245000 rst=0 tick=1 y=11
+# Time=1255000 rst=0 tick=0 y=12
+# Time=1345000 rst=0 tick=1 y=12
+# Time=1355000 rst=0 tick=0 y=13
+# Time=1445000 rst=0 tick=1 y=13
+# Time=1455000 rst=0 tick=0 y=14
+# Time=1545000 rst=0 tick=1 y=14
+# Time=1555000 rst=0 tick=0 y=15
+# Time=1645000 rst=0 tick=1 y=15
+# Time=1655000 rst=0 tick=0 y=16
+# Time=1745000 rst=0 tick=1 y=16
+# Time=1755000 rst=0 tick=0 y=17
+# Time=1845000 rst=0 tick=1 y=17
+# Time=1855000 rst=0 tick=0 y=18
+# Time=1945000 rst=0 tick=1 y=18
+# Time=1955000 rst=0 tick=0 y=19
+# End time: 18:03:14 on May 21,2025, Elapsed time: 0:05:12
+# Errors: 0, Warnings: 0

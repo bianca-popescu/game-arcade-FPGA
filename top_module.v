@@ -3,66 +3,73 @@
 // grid: store piece position
 // background: display screen
 
-module tetris_top(
-    input logic clk,        
-    input logic rst,        
-    output logic o_hsync,
-    output logic o_vsync,
-    output logic [7:0] o_red,
-    output logic [7:0] o_green,
-    output logic [7:0] o_blue
+module top_module(
+
+    input clk,
+    input rst,
+    output [3:0] current_x,
+    output [4:0] current_y
 );
 
-    logic clk25MHz;
-    logic tick1Hz;
+    wire tick;
 
-    // status de la AFPL
-    logic [3:0] x_pos;
-    logic [4:0] y_pos;
-    logic piece_active;
+    // Coordonate
+    reg [3:0] x;
+    reg [4:0] y;
 
- 
-    logic dummy_cell_out; // dummy signal 
 
-    clock_divider #(.DIVISOR(2)) clkdiv_25MHz (
-        .clock_in(clk),
-        .clock_out(clk25MHz)
-    );
+    wire cell_state;
 
-    tick_generator #(.N(50000000)) tick_1Hz (
+    reg write_enable;
+
+    reg cell_value;
+
+    tick_generator #(.N(25000000)) tick_gen (
+	 
         .clk(clk),
         .rst(rst),
-        .tick(tick1Hz)
+        .tick(tick)
     );
 
-    AFPL falling_piece_logic (
+   
+    grid game_grid (
+	 
         .clk(clk),
         .rst(rst),
-        .tick(tick1Hz),
-        .x_pos(x_pos),
-        .y_pos(y_pos),
-        .piece_active(piece_active)
-    );
-
-
-    grid playfield (
-        .clk(clk),
-        .rst(rst),
-        .x(x_pos),
-        .y(y_pos),
+        .x(x),
+        .y(y),
         .enable_reading(1'b0),
-        .enable_writing(piece_active),
-        .state_of_the_cell_input(1'b1), 
-        .state_of_the_cell_output(dummy_cell_out)
+        .enable_writing(write_enable),
+        .state_of_the_cell_input(cell_value),
+        .state_of_the_cell_output(cell_state)
     );
 
-    background vga_bg (
-        .clk(clk),
-        .o_hsync(o_hsync),
-        .o_vsync(o_vsync),
-        .o_red(o_red),
-        .o_blue(o_blue),
-        .o_green(o_green)
-    );
+    // current piece position
+    assign current_x = x;
+    assign current_y = y;
+
+   
+	
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            x <= 4'd4;
+            y <= 5'd0;
+            write_enable <= 0;
+            cell_value <= 0;
+				
+        end else if (tick) begin
+            // Write current cell as filled
+            write_enable <= 1;
+            cell_value <= 1;
+            y <= y + 1;
+
+            if (y == 19) begin
+                y <= 0; // Reset the piece
+            end
+				
+        end else begin
+            write_enable <= 0;
+        end
+    end
 
 endmodule

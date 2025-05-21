@@ -1,28 +1,19 @@
 module grid (
-    input logic clk,
-    input logic rst,
-    input logic [3:0]x, // 3 doar 4 biti sunt necesari pana la 9
-    input logic [4:0]y, // 5 biti pana la 19
-    input logic enable_reading,
-    input logic enable_writing,
-    input logic state_of_the_cell_input,
-    output logic state_of_the_cell_output
+    input clk,
+    input rst,
+    input [3:0] x, // 3 doar 4 biti sunt necesari pana la 9
+    input [4:0] y, // 5 biti pana la 19
+    input enable_reading,
+    input enable_writing,
+    input state_of_the_cell_input,
+    output reg state_of_the_cell_output
 );
 
-// logic = un tip de dapte din SystemVerilog care este mai putin ambiguu decat
-// reg si wire din verilog original
-// logic se comporta ca un reg (pentru intrari iesiri si semnale interne)
-// logic = poate lua 1 sau 0
+    reg grid_mem [0:19][0:9];
 
-    reg [0:0] grid [0:19][0:9];
-
-    // De ce se foloseste always_comb in loc de always @(*) ? 
-    //     - Este mai sigur de folosit deoarece reinitializeaza semnalele
-    //     - Este mai clar faptul ca este logica combinationala
-    
-    always_comb begin
+    always @(*) begin
         if (enable_reading) begin
-            state_of_the_cell_output = grid[y][x];
+            state_of_the_cell_output = grid_mem[y][x];
         end else begin
             state_of_the_cell_output = 1'b0;
         end
@@ -34,19 +25,18 @@ module grid (
     //      - Este special gandit pentru blocuri secventiale
     //      - Protejeaza de greseli
     
-    always_ff @(posedge clk or posedge rst) begin
+    always @(posedge clk or posedge rst) begin
         if (rst) begin
             // Curatarea grid-ului, cu reset activ pe 1
-            integer i,j;
-            for (i=0;i<20;i=i+1) begin
-                for (j=0;j<10;j=j+1) begin
-                    grid[i][j] <= 1'b0;
+            integer i, j;
+            for (i = 0; i < 20; i = i + 1) begin
+                for (j = 0; j < 10; j = j + 1) begin
+                    grid_mem[i][j] <= 1'b0;
                 end
             end
         end else if (enable_writing) begin
-            grid[y][x] <= state_of_the_cell_input;
+            grid_mem[y][x] <= state_of_the_cell_input;
         end
     end
 
 endmodule
-

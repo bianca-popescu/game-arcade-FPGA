@@ -1,14 +1,14 @@
 module tick_generator #(
-    parameter N = 50000000  // Adjust this based on your clock frequency
+    parameter N = 50000000  // Adjust based on your clock frequency
 )(
-    input logic clk,
-    input logic rst,
-    output logic tick
+    input clk,
+    input rst,
+    output reg tick
 );
 
-    logic [$clog2(N)-1:0] count;
+    reg [$clog2(N)-1:0] count;
 
-    always_ff @(posedge clk or posedge rst) begin
+    always @(posedge clk or posedge rst) begin
         if (rst) begin
             count <= 0;
             tick <= 0;
@@ -24,3 +24,4 @@ module tick_generator #(
     end
 
 endmodule
+
